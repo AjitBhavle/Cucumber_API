@@ -66,7 +66,7 @@ public class StepDefinitions {
 		if (requestBodyPath != null && !requestBodyPath.isEmpty() && requestType.equalsIgnoreCase("POST")
 				|| requestType.equalsIgnoreCase("PUT")) {
 			JSONParser jsonParser = new JSONParser();
-			FILE_PATH = System.getProperty("user.dir") + "//src//test//java//com//factory//cucumber//"
+			FILE_PATH = System.getProperty("user.dir") + "//src//test//java//com//altimetrik//Cucumber//"
 					+ requestBodyPath;
 			logger.info("Path of requestbody file is :: " + FILE_PATH);
 			try (FileReader reader = new FileReader(FILE_PATH)) {

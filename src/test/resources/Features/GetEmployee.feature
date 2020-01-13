@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 #Author: Ajit
-Feature: GET: Employee Method 
+Feature: GET:EmployeeMethod 
   Description: GET: purpose of this feature is to fetch the employees.
 
   @get

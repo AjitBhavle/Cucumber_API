@@ -29,7 +29,7 @@ Feature: GET:EmployeeMethod
 
     Examples: 
       | TestName  | URL               | ContentType      | RequestBody | RequestMethod | StatusCode |
-      | Demo test | /api/users/2 | application/json |             | GET           |        200 |
+      | Demo test | /api/users/2 			| application/json |             | GET           |        200 |
 
   @getfail
   Scenario Outline: GET: Validate GET Employee API by Invalid Status Code
@@ -40,5 +40,5 @@ Feature: GET:EmployeeMethod
 
     Examples: 
       | TestName  | URL               | ContentType      | RequestBody | RequestMethod | StatusCode |
-      | Demo test | /api/users/2 | application/json |             | GET           |        201 |
+      | Demo test | /api/users/2 			| application/json |             | GET           |        201 |
 

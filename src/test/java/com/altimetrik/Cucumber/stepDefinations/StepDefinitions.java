@@ -51,10 +51,10 @@ public class StepDefinitions {
 		if (contentType != null && !contentType.isEmpty()) {
 			CONTENT_TYPE = contentType;
 			Reporter.addStepLog(Status.PASS + " :: content type is :: " + CONTENT_TYPE);
-			logger.info("Content type is :: " + CONTENT_TYPE);
+			//logger.info("Content type is :: " + CONTENT_TYPE);
 		} else {
 			Reporter.addStepLog(Status.FAIL + " :: content type cannot be null or empty!");
-			logger.info("Content type cannot be null or empty!");
+			//logger.info("Content type cannot be null or empty!");
 		}
 	}
 
@@ -68,20 +68,28 @@ public class StepDefinitions {
 			JSONParser jsonParser = new JSONParser();
 			FILE_PATH = System.getProperty("user.dir") + "//src//test//java//com//altimetrik//Cucumber//"
 					+ requestBodyPath;
-			logger.info("Path of requestbody file is :: " + FILE_PATH);
+			//logger.info("Path of requestbody file is :: " + FILE_PATH);
 			try (FileReader reader = new FileReader(FILE_PATH)) {
 				Object obj = jsonParser.parse(reader);
 				REQUESTBODY = obj.toString();
-				logger.info("Request Body is :: " + REQUESTBODY);
+				//logger.info("Request Body is :: " + REQUESTBODY);
 			} catch (FileNotFoundException | ParseException exc) {
 				exc.printStackTrace();
 			}
 			if (REQUESTBODY.length() > 0) {
-				request.body(REQUESTBODY);
-				response = request.post();
+				if(requestType.equalsIgnoreCase("POST")) {
+					request.body(REQUESTBODY);
+					response = request.post();
+				}
+				else 
+				{
+					request.body(REQUESTBODY);
+					response = request.put();			
+				}
+				
 			} else {
 				Reporter.addStepLog(Status.FAIL + " :: Request Body cannot be null or empty!");
-				logger.info(" Request Body cannot be null or empty!");
+				//logger.info(" Request Body cannot be null or empty!");
 			}
 		} else if (requestType.equalsIgnoreCase("GET")) {
 			response = request.get();
@@ -97,17 +105,16 @@ public class StepDefinitions {
 		if (statusCode.equals(String.valueOf(STATUS_CODE))) {
 			Assert.assertEquals(STATUS_CODE, statusCode);
 			Reporter.addStepLog(Status.PASS + " :: Status Code is :: " + STATUS_CODE);
-			logger.info("Status Code is :: " + STATUS_CODE);
+			//logger.info("Status Code is :: " + STATUS_CODE);
 		} else {
 			Assert.assertEquals(STATUS_CODE, statusCode);
 			Reporter.addStepLog(Status.FAIL + " :: Status Code is :: " + STATUS_CODE);
-			logger.info("Status Code is not as expected :: " + STATUS_CODE);
+			//logger.info("Status Code is not as expected :: " + STATUS_CODE);
 		}
 	}
 
 	@And("^I try to verify the response value \"([^\"]*)\" is \"([^\"]*)\"$")
 	public void verifyResponseValue(String responseKey, String value) throws Throwable {
-		Object obj = responseKey;
 		JSONParser parser = new JSONParser();
 		JSONObject responseObject = (JSONObject) parser.parse(RESPONSEBODY);
 		Object key = (Object) responseObject.get(responseKey);
@@ -117,14 +124,14 @@ public class StepDefinitions {
 	private void compareResponseValues(String expected, String actual, String responseKey) {
 		Reporter.addStepLog("Actual Value is  ::" + actual);
 		Reporter.addStepLog("Expected Value is  ::" + expected);
-		logger.info("Actual Value is  ::" + actual);
-		logger.info("Expected Value is  ::" + expected);
+		//logger.info("Actual Value is  ::" + actual);
+		//logger.info("Expected Value is  ::" + expected);
 		if (expected.equals(actual)) {
 			Assert.assertEquals(actual, expected);
-			Reporter.addStepLog(Status.PASS + " " + responseKey + " : Expected value : " + expected
+			Reporter.addStepLog(Status.PASS + " "+ "'" + responseKey + "'" +" : Expected value : " + expected
 					+ " mathches with Actual Value : " + actual);
 		} else {
-			Reporter.addStepLog(Status.FAIL + " " + responseKey + " : Expected value : " + expected
+			Reporter.addStepLog(Status.FAIL + "'" + responseKey + "'" +" : Expected value : " + expected
 					+ " do not matches with Actual Value : " + actual);
 			Assert.assertEquals(actual, expected);
 		}

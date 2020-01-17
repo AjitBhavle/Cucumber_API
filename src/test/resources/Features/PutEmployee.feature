@@ -12,8 +12,8 @@ Feature: PUT: PutEmployee
     And I try to verify the response value "job" is "zion resident"
 
     Examples: 
-      | TestName  | URL          | ContentType      | RequestBody         		 | RequestMethod | StatusCode |
-      | Demo test | /api/users/2 | application/json | testdata/PutEmpData.json | PUT          |        200 |
+      | TestName  		| URL          | ContentType      | RequestBody         		 | RequestMethod | StatusCode |
+      | PUT Employee 	| /api/users/2 | application/json | testdata/PutEmpData.json | PUT          |        200 |
 #
   #@putfail
   #Scenario Outline: PUT: Validate PUT Employee method by Passing valid Data.

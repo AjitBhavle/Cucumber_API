@@ -2,7 +2,6 @@ package com.altimetrik.Cucumber.stepDefinations;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.logging.Logger;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -11,6 +10,7 @@ import org.testng.Assert;
 
 import com.aventstack.extentreports.Status;
 import com.cucumber.listener.Reporter;
+import org.apache.log4j.*;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -21,7 +21,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class StepDefinitions {
-	private final static Logger logger = Logger.getLogger(StepDefinitions.class.getName());
+	private final static Logger logger = Logger.getLogger(StepDefinitions.class);
 	public static String apiEndPointUri;
 	public static String testName;
 	public static String CONTENT_TYPE;
@@ -36,10 +36,7 @@ public class StepDefinitions {
 		String apiHostName = "https://reqres.in";
 		apiEndPointUri = String.format("%s%s", apiHostName, URL);
 		//apiEndPointUri = apiHostName+ URL;
-		
 		System.out.println("URL is:"+apiEndPointUri);
-
-		//
 		testName = testCaseName;
 		Reporter.addStepLog(Status.PASS + " :: Cucumber Hostname URL is :: " + apiEndPointUri);
 		logger.info("Cucumber Hostname URL is :: " + apiEndPointUri);
@@ -51,10 +48,10 @@ public class StepDefinitions {
 		if (contentType != null && !contentType.isEmpty()) {
 			CONTENT_TYPE = contentType;
 			Reporter.addStepLog(Status.PASS + " :: content type is :: " + CONTENT_TYPE);
-			//logger.info("Content type is :: " + CONTENT_TYPE);
+			logger.info("Content type is :: " + CONTENT_TYPE);
 		} else {
 			Reporter.addStepLog(Status.FAIL + " :: content type cannot be null or empty!");
-			//logger.info("Content type cannot be null or empty!");
+			logger.info("Content type cannot be null or empty!");
 		}
 	}
 
@@ -68,11 +65,11 @@ public class StepDefinitions {
 			JSONParser jsonParser = new JSONParser();
 			FILE_PATH = System.getProperty("user.dir") + "//src//test//java//com//altimetrik//Cucumber//"
 					+ requestBodyPath;
-			//logger.info("Path of requestbody file is :: " + FILE_PATH);
+			logger.info("Path of requestbody file is :: " + FILE_PATH);
 			try (FileReader reader = new FileReader(FILE_PATH)) {
 				Object obj = jsonParser.parse(reader);
 				REQUESTBODY = obj.toString();
-				//logger.info("Request Body is :: " + REQUESTBODY);
+				logger.info("Request Body is :: " + REQUESTBODY);
 			} catch (FileNotFoundException | ParseException exc) {
 				exc.printStackTrace();
 			}
@@ -86,10 +83,10 @@ public class StepDefinitions {
 					request.body(REQUESTBODY);
 					response = request.put();			
 				}
-				
+
 			} else {
 				Reporter.addStepLog(Status.FAIL + " :: Request Body cannot be null or empty!");
-				//logger.info(" Request Body cannot be null or empty!");
+				logger.info(" Request Body cannot be null or empty!");
 			}
 		} else if (requestType.equalsIgnoreCase("GET")) {
 			response = request.get();
@@ -105,11 +102,11 @@ public class StepDefinitions {
 		if (statusCode.equals(String.valueOf(STATUS_CODE))) {
 			Assert.assertEquals(STATUS_CODE, statusCode);
 			Reporter.addStepLog(Status.PASS + " :: Status Code is :: " + STATUS_CODE);
-			//logger.info("Status Code is :: " + STATUS_CODE);
+			logger.info("Status Code is :: " + STATUS_CODE);
 		} else {
 			Assert.assertEquals(STATUS_CODE, statusCode);
 			Reporter.addStepLog(Status.FAIL + " :: Status Code is :: " + STATUS_CODE);
-			//logger.info("Status Code is not as expected :: " + STATUS_CODE);
+			logger.info("Status Code is not as expected :: " + STATUS_CODE);
 		}
 	}
 
@@ -124,8 +121,8 @@ public class StepDefinitions {
 	private void compareResponseValues(String expected, String actual, String responseKey) {
 		Reporter.addStepLog("Actual Value is  ::" + actual);
 		Reporter.addStepLog("Expected Value is  ::" + expected);
-		//logger.info("Actual Value is  ::" + actual);
-		//logger.info("Expected Value is  ::" + expected);
+		logger.info("Actual Value is  ::" + actual);
+		logger.info("Expected Value is  ::" + expected);
 		if (expected.equals(actual)) {
 			Assert.assertEquals(actual, expected);
 			Reporter.addStepLog(Status.PASS + " "+ "'" + responseKey + "'" +" : Expected value : " + expected

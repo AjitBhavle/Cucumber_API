@@ -1,0 +1,64 @@
+2020-01-15 11:45:21 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users
+2020-01-15 11:45:21 INFO  StepDefinitions:43 - Cucumber Test case name is :: Create Employee
+2020-01-15 11:45:21 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-15 11:45:21 INFO  StepDefinitions:68 - Path of requestbody file is :: D:\Users\ABhavle\eclipse-workspace\Cucumber_API//src//test//java//com//altimetrik//Cucumber//testData/CreateEmpData.json
+2020-01-15 11:45:21 INFO  StepDefinitions:72 - Request Body is :: {"name":"Ajit","last_name":"Bhavle","job":"SDET"}
+2020-01-15 11:45:24 INFO  StepDefinitions:105 - Status Code is :: 201
+2020-01-15 11:45:24 INFO  StepDefinitions:124 - Actual Value is  ::Ajit
+2020-01-15 11:45:24 INFO  StepDefinitions:125 - Expected Value is  ::Ajit
+2020-01-15 11:45:24 INFO  StepDefinitions:124 - Actual Value is  ::SDET
+2020-01-15 11:45:24 INFO  StepDefinitions:125 - Expected Value is  ::SDET
+2020-01-15 11:45:24 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users
+2020-01-15 11:45:24 INFO  StepDefinitions:43 - Cucumber Test case name is :: Create Employee
+2020-01-15 11:45:24 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-15 11:45:24 INFO  StepDefinitions:68 - Path of requestbody file is :: D:\Users\ABhavle\eclipse-workspace\Cucumber_API//src//test//java//com//altimetrik//Cucumber//testData/CreateEmpData.json
+2020-01-15 11:45:24 INFO  StepDefinitions:72 - Request Body is :: {"name":"Ajit","last_name":"Bhavle","job":"SDET"}
+2020-01-15 11:45:24 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users/2
+2020-01-15 11:45:24 INFO  StepDefinitions:43 - Cucumber Test case name is :: Demo test
+2020-01-15 11:45:24 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-15 11:45:25 INFO  StepDefinitions:105 - Status Code is :: 200
+2020-01-15 11:45:25 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users/2
+2020-01-15 11:45:25 INFO  StepDefinitions:43 - Cucumber Test case name is :: Demo test
+2020-01-15 11:45:25 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-15 11:45:26 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users/2
+2020-01-15 11:45:26 INFO  StepDefinitions:43 - Cucumber Test case name is :: Demo test
+2020-01-15 11:45:26 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-15 11:45:26 INFO  StepDefinitions:68 - Path of requestbody file is :: D:\Users\ABhavle\eclipse-workspace\Cucumber_API//src//test//java//com//altimetrik//Cucumber//testdata/PutEmpData.json
+2020-01-15 11:45:26 INFO  StepDefinitions:72 - Request Body is :: {"name":"morpheus","job":"zion resident"}
+2020-01-15 11:45:26 INFO  StepDefinitions:105 - Status Code is :: 200
+2020-01-15 11:45:26 INFO  StepDefinitions:124 - Actual Value is  ::morpheus
+2020-01-15 11:45:26 INFO  StepDefinitions:125 - Expected Value is  ::morpheus
+2020-01-15 11:45:26 INFO  StepDefinitions:124 - Actual Value is  ::zion resident
+2020-01-15 11:45:26 INFO  StepDefinitions:125 - Expected Value is  ::zion resident
+2020-01-16 12:24:41 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users
+2020-01-16 12:24:41 INFO  StepDefinitions:43 - Cucumber Test case name is :: Create Employee
+2020-01-16 12:24:41 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-16 12:24:41 INFO  StepDefinitions:68 - Path of requestbody file is :: D:\Users\ABhavle\eclipse-workspace\Cucumber_API//src//test//java//com//altimetrik//Cucumber//testData/CreateEmpData.json
+2020-01-16 12:24:41 INFO  StepDefinitions:72 - Request Body is :: {"name":"Ajit","last_name":"Bhavle","job":"SDET"}
+2020-01-16 12:24:44 INFO  StepDefinitions:105 - Status Code is :: 201
+2020-01-16 12:24:44 INFO  StepDefinitions:124 - Actual Value is  ::Ajit
+2020-01-16 12:24:44 INFO  StepDefinitions:125 - Expected Value is  ::Ajit
+2020-01-16 12:24:44 INFO  StepDefinitions:124 - Actual Value is  ::SDET
+2020-01-16 12:24:44 INFO  StepDefinitions:125 - Expected Value is  ::SDET
+2020-01-16 12:24:44 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users
+2020-01-16 12:24:44 INFO  StepDefinitions:43 - Cucumber Test case name is :: Create Employee
+2020-01-16 12:24:44 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-16 12:24:44 INFO  StepDefinitions:68 - Path of requestbody file is :: D:\Users\ABhavle\eclipse-workspace\Cucumber_API//src//test//java//com//altimetrik//Cucumber//testData/CreateEmpData.json
+2020-01-16 12:24:44 INFO  StepDefinitions:72 - Request Body is :: {"name":"Ajit","last_name":"Bhavle","job":"SDET"}
+2020-01-16 12:24:45 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users/2
+2020-01-16 12:24:45 INFO  StepDefinitions:43 - Cucumber Test case name is :: GET Employee
+2020-01-16 12:24:45 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-16 12:24:46 INFO  StepDefinitions:105 - Status Code is :: 200
+2020-01-16 12:24:46 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users/2
+2020-01-16 12:24:46 INFO  StepDefinitions:43 - Cucumber Test case name is :: GET Employee
+2020-01-16 12:24:46 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-16 12:24:46 INFO  StepDefinitions:42 - Cucumber Hostname URL is :: https://reqres.in/api/users/2
+2020-01-16 12:24:46 INFO  StepDefinitions:43 - Cucumber Test case name is :: PUT Employee
+2020-01-16 12:24:46 INFO  StepDefinitions:51 - Content type is :: application/json
+2020-01-16 12:24:46 INFO  StepDefinitions:68 - Path of requestbody file is :: D:\Users\ABhavle\eclipse-workspace\Cucumber_API//src//test//java//com//altimetrik//Cucumber//testdata/PutEmpData.json
+2020-01-16 12:24:46 INFO  StepDefinitions:72 - Request Body is :: {"name":"morpheus","job":"zion resident"}
+2020-01-16 12:24:47 INFO  StepDefinitions:105 - Status Code is :: 200
+2020-01-16 12:24:47 INFO  StepDefinitions:124 - Actual Value is  ::morpheus
+2020-01-16 12:24:47 INFO  StepDefinitions:125 - Expected Value is  ::morpheus
+2020-01-16 12:24:47 INFO  StepDefinitions:124 - Actual Value is  ::zion resident
+2020-01-16 12:24:47 INFO  StepDefinitions:125 - Expected Value is  ::zion resident
